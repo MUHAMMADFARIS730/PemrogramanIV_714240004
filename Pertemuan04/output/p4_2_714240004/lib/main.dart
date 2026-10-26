@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true, // <-- Diubah menjadi true agar banner DEBUG muncul kembali
       title: 'Tugas Pertemuan 4',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
@@ -41,20 +41,20 @@ class TugasPertemuan4Page extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Box 1 (Biru): Ukuran pas dengan bayangan halus di bawah
+              // Box 1 (Biru)
               SizedBox(
                 width: 300,
                 height: 75,
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.blue,
-                    borderRadius: BorderRadius.circular(1),
+                    borderRadius: BorderRadius.circular(14),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        blurRadius: 10,
+                        color: Colors.black.withOpacity(0.3),
+                        blurRadius: 8,
                         spreadRadius: 0,
-                        offset: const Offset(0, 6),
+                        offset: const Offset(0, 7),
                       ),
                     ],
                   ),
@@ -76,7 +76,7 @@ class TugasPertemuan4Page extends StatelessWidget {
                 width: 300,
                 child: Row(
                   children: [
-                    // Box 2 (Merah): Outline border tebal, teks di pojok kiri atas
+                    // Box 2 (Merah)
                     Expanded(
                       child: Container(
                         height: 150,
@@ -96,7 +96,7 @@ class TugasPertemuan4Page extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(width: 16),
-                    // Box 3 (Hijau): Sudut asimetris (kiri atas & kanan bawah tumpul), teks di pojok kanan bawah
+                    // Box 3 (Hijau)
                     Expanded(
                       child: Container(
                         height: 150,
